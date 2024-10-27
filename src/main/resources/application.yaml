@@ -1,0 +1,19 @@
+spring:
+  r2dbc:
+    url: r2dbc:h2:mem:///testdb
+    username: sa
+    password:
+
+  h2:
+   console:
+    enabled: true
+  sql:
+    init:
+      platform: h2
+      schema-locations: classpath:sql/data.sql
+  main:
+    web-application-type: reactive
+
+  jpa:
+    hibernate:
+      ddl-auto: update
